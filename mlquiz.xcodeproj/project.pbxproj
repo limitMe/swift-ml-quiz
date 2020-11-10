@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		F737F8F8255AADF90061D961 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F737F8F7255AADF90061D961 /* main.swift */; };
+		F737F901255AB0310061D961 /* ComplexModule in Frameworks */ = {isa = PBXBuildFile; productRef = F737F900255AB0310061D961 /* ComplexModule */; };
+		F737F903255AB0310061D961 /* RealModule in Frameworks */ = {isa = PBXBuildFile; productRef = F737F902255AB0310061D961 /* RealModule */; };
+		F737F905255AB0310061D961 /* Numerics in Frameworks */ = {isa = PBXBuildFile; productRef = F737F904255AB0310061D961 /* Numerics */; };
+		F737F909255AB1350061D961 /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = F737F908255AB1350061D961 /* SwiftCSV */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +36,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F737F903255AB0310061D961 /* RealModule in Frameworks */,
+				F737F909255AB1350061D961 /* SwiftCSV in Frameworks */,
+				F737F905255AB0310061D961 /* Numerics in Frameworks */,
+				F737F901255AB0310061D961 /* ComplexModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +86,12 @@
 			dependencies = (
 			);
 			name = mlquiz;
+			packageProductDependencies = (
+				F737F900255AB0310061D961 /* ComplexModule */,
+				F737F902255AB0310061D961 /* RealModule */,
+				F737F904255AB0310061D961 /* Numerics */,
+				F737F908255AB1350061D961 /* SwiftCSV */,
+			);
 			productName = mlquiz;
 			productReference = F737F8F4255AADF90061D961 /* mlquiz */;
 			productType = "com.apple.product-type.tool";
@@ -105,6 +119,10 @@
 				Base,
 			);
 			mainGroup = F737F8EB255AADF90061D961;
+			packageReferences = (
+				F737F8FF255AB0310061D961 /* XCRemoteSwiftPackageReference "swift-numerics" */,
+				F737F907255AB1350061D961 /* XCRemoteSwiftPackageReference "SwiftCSV" */,
+			);
 			productRefGroup = F737F8F5255AADF90061D961 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -281,6 +299,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F737F8FF255AB0310061D961 /* XCRemoteSwiftPackageReference "swift-numerics" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:apple/swift-numerics.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.0;
+			};
+		};
+		F737F907255AB1350061D961 /* XCRemoteSwiftPackageReference "SwiftCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:swiftcsv/SwiftCSV.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F737F900255AB0310061D961 /* ComplexModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F737F8FF255AB0310061D961 /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = ComplexModule;
+		};
+		F737F902255AB0310061D961 /* RealModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F737F8FF255AB0310061D961 /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = RealModule;
+		};
+		F737F904255AB0310061D961 /* Numerics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F737F8FF255AB0310061D961 /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = Numerics;
+		};
+		F737F908255AB1350061D961 /* SwiftCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F737F907255AB1350061D961 /* XCRemoteSwiftPackageReference "SwiftCSV" */;
+			productName = SwiftCSV;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F737F8EC255AADF90061D961 /* Project object */;
 }

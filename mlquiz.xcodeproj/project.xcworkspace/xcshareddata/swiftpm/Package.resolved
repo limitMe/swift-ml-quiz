@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "swift-numerics",
+        "repositoryURL": "git@github.com:apple/swift-numerics.git",
+        "state": {
+          "branch": null,
+          "revision": "6b24333510e9044cf4716a07bed65eeed6bc6393",
+          "version": "0.0.8"
+        }
+      },
+      {
+        "package": "SwiftCSV",
+        "repositoryURL": "git@github.com:swiftcsv/SwiftCSV.git",
+        "state": {
+          "branch": null,
+          "revision": "8ae14758a2019fd55dc6f9b6ecbbe246bcef179f",
+          "version": "0.5.6"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
