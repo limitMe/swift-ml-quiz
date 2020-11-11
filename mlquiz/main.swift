@@ -43,9 +43,9 @@ func test<T: Real>(thetas: [T], array: Array<Array<T>>) -> T {
     var sum = T(0);
     for row in array {
         let x: [T] = [T(1), row[1], row[2]];
-        let y = row[3];
+        let y: T = row[3];
         let hypo = hypothesis(thetas: thetas, x: x);
-        let diff = y - hypo;
+        let diff = T(0) - y * .log(hypo) - (T(1) - y) * .log(T(1) - hypo);
         sum += diff * diff;
     }
     return sum;
