@@ -46,7 +46,7 @@ func test<T: Real>(thetas: [T], array: Array<Array<T>>) -> T {
         let y: T = row[3];
         let hypo = hypothesis(thetas: thetas, x: x);
         let diff = T(0) - y * .log(hypo) - (T(1) - y) * .log(T(1) - hypo);
-        sum += diff * diff;
+        sum += diff;
     }
     return sum;
 }
